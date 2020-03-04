@@ -1,0 +1,25 @@
+/* Button Styles */
+
+.button {
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    color: black;
+    background: none;
+    font-size: 14px;
+    color: white;
+    background-color: var(--primary-purple);
+    border: 1px solid var(--primary-purple-border);
+    width: 100%;
+
+    &:hover {
+        box-shadow: inset 0 0 0 500px rgba(0, 0, 0, 0.05);
+        
+    }
+    &:active {
+        box-shadow: inset 0 0 0 500px rgba(0, 0, 0, 0.2);
+    }
+}

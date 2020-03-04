@@ -1,0 +1,12 @@
+/* PasswordInput Styles */
+.password-container {
+    position: relative;
+}
+.password-icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    i:hover {
+        cursor: pointer;
+    }
+}

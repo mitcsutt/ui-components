@@ -1,0 +1,45 @@
+/* TextInput Styles */
+
+.text-input {
+    margin-top: 20px;
+    @include transition(
+        border-bottom-color 400ms cubic-bezier(0.4, 0, 0.2, 1) 0ms
+    );
+    border-bottom: 2px solid silver;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1),
+        0 8px 6px -6px rgba(0, 0, 0, 0.13);
+    width: 300px;
+}
+.text-input__label {
+    z-index: 2;
+    @include transition(
+        (
+            color 400ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+            transform 400ms cubic-bezier(0.4, 0, 0.2, 1) 0ms
+        )
+    );
+    position: absolute;
+    color: gray;
+    user-select: none;
+    padding: 12px 5px;
+}
+.text-input__input {
+    width: 100%;
+    padding: 12px 5px;
+    margin: 0;
+    position: relative;
+    background: none;
+    border: 0;
+}
+.text-input--transformed {
+    .text-input__label {
+        @include translate(0, -25px);
+        @include transform-origin(bottom left);
+    }
+}
+.text-input--focused {
+    border-bottom: 2px solid var(--primary-purple);
+    .text-input__label {
+        color: var(--primary-purple);
+    }
+}
